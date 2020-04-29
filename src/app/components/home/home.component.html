@@ -1,0 +1,33 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Peliculas App</h1>
+        <p class="lead">Esta es una aplicación de prueba para consumir los servicios de MobieDB</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" *ngIf="peliculas">
+        <h3>Peliculas en cartelera</h3>
+        <hr>
+        <div *ngFor="let pelicula of peliculas" class="img-thumbnail">
+            <h4 class="caption">
+                {{pelicula.title}}
+            </h4>
+            <img *ngIf="pelicula.backdrop_path" src="http://image.tmdb.org/t/p/w500{{pelicula.backdrop_path}}" alt="" srcset="">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h3>Peliculas más populares entre los niños</h3>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h3>Peliculas màs populares</h3>
+        <hr>
+    </div>
+</div>
